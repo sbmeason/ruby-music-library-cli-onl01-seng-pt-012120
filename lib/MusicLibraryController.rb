@@ -38,12 +38,17 @@ class MusicLibraryController
   end
 
   def list_songs
+<<<<<<< HEAD
     Song.all.sort{|a,b| a.name <=> b.name}.each_with_index do |s, i|
+=======
+    Song.all.sort{|a, b| a.name <=> b.name}.each_with_index do |s, i|
+>>>>>>> 46b4f9c959a857e98bd839f81059bc8a84b4375f
       puts "#{i+1}. #{s.artist.name} - #{s.name} - #{s.genre.name}"
     end
   end
 
   def list_artists
+<<<<<<< HEAD
     #binding.pry  
     Artist.all.uniq.sort{|a,b| a.name <=> b.name}.each_with_index do |a, i|
       puts "#{i+1}. #{a.name}"
@@ -89,6 +94,13 @@ class MusicLibraryController
     end
     puts "Playing #{song.name} by #{song.artist.name}" if song
   end
+=======
+    Artist.all.sort{|a, b| a.name <=> b.name}.each_with_index do |a, i|
+      puts "#{i+1}. #{a.name}"
+    end
+  end
+    
+>>>>>>> 46b4f9c959a857e98bd839f81059bc8a84b4375f
 
     
     
